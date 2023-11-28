@@ -14,10 +14,10 @@ type MenuAction = {
   onSelectedMenu: (selectedMenu: SelectedMenu) => void;
 };
 
-const MenuSelectedContext = createContext<MenuSelected>({
-  selectedMenu: {} as SelectedMenu,
-});
-
+const MenuSelectedContext = createContext ({
+  selectedMenu: { id: "first" },
+  });
+  
 const MenuActionContext = createContext<MenuAction>({
   onSelectedMenu: noop,
 });
